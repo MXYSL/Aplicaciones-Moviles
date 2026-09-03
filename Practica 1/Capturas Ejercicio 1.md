@@ -16,9 +16,9 @@ docker run hello-world
 
 | Herramienta | Versión instalada | Sistema operativo |
 |---|---|---|
-| Java Development Kit (JDK) | Pendiente | Windows 11 25H2 |
-| Maven | Pendiente | Windows 11 25H2 |
-| Git | Pendiente | Windows 11 25H2 |
+| Java Development Kit (JDK) | 23.0.2 | Windows 11 25H2 |
+| Maven | 3.19.16 | Windows 11 25H2 |
+| Git | 2.49.0 | Windows 11 25H2 |
 | Flutter | 3.47.2 (stable) | Windows 11 25H2 |
 | Android SDK | 36.0.0 | Windows 11 25H2 |
 | Node.js | 22.14.0 | Windows 11 25H2 |
