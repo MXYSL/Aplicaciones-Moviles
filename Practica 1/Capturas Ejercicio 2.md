@@ -16,3 +16,7 @@ Los tres enfoques permiten desarrollar una aplicación básica de tipo "Hola Mun
 **Jetpack Compose** simplifica el desarrollo de interfaces Android al permitir construirlas directamente mediante código Kotlin utilizando funciones `@Composable`. Esto reduce la cantidad de código y archivos necesarios, además de facilitar la creación y modificación de la interfaz. Su diseño es más declarativo, por lo que los componentes se describen según el resultado visual esperado.
 
 **Flutter** también utiliza un enfoque declarativo, pero permite desarrollar interfaces mediante widgets escritos en Dart. La estructura visual se construye combinando estos widgets, lo que facilita reutilizar componentes y mantener una interfaz consistente. Además, Flutter está orientado al desarrollo multiplataforma.
+
+
+**Commits**
+<img width="1369" height="891" alt="image" src="https://github.com/user-attachments/assets/2dd63e77-d7fb-4da9-9361-fc95e65d9d3e" />
