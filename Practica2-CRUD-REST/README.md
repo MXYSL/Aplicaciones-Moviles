@@ -1,15 +1,50 @@
-# Práctica 2. Aplicación móvil básica para operaciones CRUD con un servicio REST
+<div align="center">
 
-**Ingeniería en Sistemas Computacionales · Plan 2020**  
-**Unidad de aprendizaje:** Desarrollo de aplicaciones móviles nativas  
-**Estudiante:** [NOMBRE COMPLETO]  
-**Boleta:** [NÚMERO DE BOLETA]  
-**Grupo:** [GRUPO]  
-**Profesor(a):** [NOMBRE DEL PROFESOR O PROFESORA]  
-**Fecha de entrega:** [DD/MM/AAAA]
+# PRÁCTICA 2
 
-## 1. Introducción
+## Aplicación móvil CRUD con servicio REST
 
+### Android · Kotlin · Flask · Docker · SQLite
+
+<br>
+
+**DESARROLLO DE APLICACIONES MÓVILES NATIVAS**
+
+
+<br>
+
+![Android](https://img.shields.io/badge/Android-Kotlin-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Flask](https://img.shields.io/badge/Backend-Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![Docker](https://img.shields.io/badge/Contenedores-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![SQLite](https://img.shields.io/badge/Base_de_datos-SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+
+<br>
+
+---
+
+### DATOS ACADÉMICOS
+
+
+| <p align=center> Instituto Politécnico Nacional </center>|
+|:---|
+|  <p align=center>Escuela Superior de Cómputo |
+|  <p align=center>Ingeniería en Sistemas Computacionales |
+|  <p align=center>Mayra Solis Lugo |
+|  <p align=center> 2023630449 |
+| <p align=center> Grupo: 7CV4 </center> |
+| <p align=center> Profesor: Gabriel Hurtado Áviles |
+| <p align=center> Fecha de entrega: 18/09/2026 |
+
+---
+
+**Repositorio de prácticas de Aplicaciones Móviles**
+
+</div>
+
+<br>
+
+## Introducción
+<div align=justify>
 Esta práctica consiste en desarrollar una aplicación Android que permite registrar usuarios, iniciar sesión y administrar tareas mediante operaciones CRUD (crear, consultar, actualizar y eliminar). La aplicación está desarrollada en **Kotlin con Jetpack Compose y Material 3** y se comunica mediante **Retrofit/OkHttp** con una API REST implementada en **Python y Flask**. El servicio se ejecuta en un contenedor de **Docker**, utiliza **SQLAlchemy** como ORM y **SQLite** como base de datos. Para la autenticación se emplean contraseñas almacenadas mediante hash con sal usando **bcrypt** y tokens **JWT** para acceder a las rutas protegidas.
 
 Se eligió esta combinación porque separa la interfaz móvil, la lógica del servidor y la persistencia; además, Docker Compose permite reconstruir el backend sin instalar Python ni sus dependencias directamente en la computadora de evaluación. El recurso seleccionado para el CRUD es **tareas**, con título, descripción y estado de realización.
@@ -77,7 +112,85 @@ Practica2-CRUD-REST/
    ```
 
    Abrir `.env` y completar los valores solicitados por `.env.example`. Generar una clave JWT aleatoria y suficientemente larga; **no copiar al repositorio el archivo `.env` real**. En sistemas distintos de PowerShell puede usarse `cp .env.example .env`.
+### Configuración de las variables de entorno
 
+Por motivos de seguridad, el archivo `.env`, que contiene la clave utilizada para firmar y validar los tokens JWT, no se incluye en el repositorio.
+
+Para ejecutar el backend después de clonar el proyecto, es necesario crear un archivo `.env` a partir de `.env.example` y configurar una clave privada propia.
+
+**Paso 1. Acceder al directorio del backend**
+
+Desde la raíz del repositorio:
+
+```powershell
+cd Practica2-CRUD-REST/Docker-Flask/ORM
+```
+
+**Paso 2. Crear el archivo `.env`**
+
+En PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Este comando genera una copia del archivo de ejemplo, conservando el nombre de la variable que necesita Flask:
+
+```dotenv
+JWT_SECRET_KEY=coloca_aqui_una_clave_segura
+```
+
+**Paso 3. Generar una clave JWT segura**
+
+Ejecutar:
+
+```powershell
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+El comando genera una clave aleatoria de 64 caracteres hexadecimales.
+
+**Paso 4. Configurar la clave privada**
+
+Abrir el archivo `.env`:
+
+```powershell
+notepad .env
+```
+
+Reemplazar `coloca_aqui_una_clave_segura` por la clave generada en el paso anterior:
+
+```dotenv
+JWT_SECRET_KEY=CLAVE_GENERADA_EN_EL_PASO_ANTERIOR
+```
+
+Guardar el archivo. No es necesario modificar `.env.example`.
+
+> **Nota de seguridad:** cada persona que clone el repositorio debe generar su propia clave. El archivo `.env` está excluido mediante `.gitignore` para evitar que las claves privadas se publiquen en GitHub.
+
+**Paso 5. Construir y ejecutar el backend**
+
+Desde el mismo directorio:
+
+```powershell
+docker compose up --build
+```
+
+Docker Compose cargará automáticamente las variables del archivo `.env`, construirá la imagen y ejecutará el servicio Flask en el puerto `5000`.
+
+Para comprobar que el backend está disponible:
+
+```powershell
+curl.exe http://localhost:5000/
+```
+
+La respuesta esperada es:
+
+```json
+{
+  "message": "API REST funcionando"
+}
+```
 3. Construir y levantar el backend:
 
    ```powershell
