@@ -1,0 +1,19 @@
+# Variables privadas
+.env
+
+# Base de datos local
+instance/
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Entorno virtual
+venv/
+.venv/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

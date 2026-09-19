@@ -1,17 +1,21 @@
-version: '3.8'
-
 services:
   web:
-    # Construir usando el Dockerfile del directorio actual (.)
+    # Construye la imagen utilizando el Dockerfile
     build: .
-    container_name: flask_login_backend
-    
-    # Mapeo de puertos: Puerto PC : Puerto Contenedor
+
+    container_name: flask_crud_backend
+
+    # Puerto PC : Puerto contenedor
     ports:
       - "5000:5000"
-    
-    # Volúmenes: Sincroniza tu carpeta actual con /app en el contenedor.
-    # Esto permite que si cambias el código en tu PC, se actualice en Docker
-    # sin tener que reconstruir la imagen (gracias al debug=True de Flask).
+
+    # Variables privadas
+    env_file:
+      - .env
+
+    # Persistencia de la base de datos SQLite
     volumes:
-      - .:/app
+      - sqlite_data:/app/instance
+
+volumes:
+  sqlite_data:

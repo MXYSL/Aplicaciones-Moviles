@@ -13,3 +13,24 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Android Studio
+.idea/
+*.iml
+local.properties
+
+# Gradle
+.gradle/
+**/build/
+
+# Kotlin
+.kotlin/
+
+# Archivos generados
+*.apk
+*.aab
+
+# Configuración local
+captures/
+.externalNativeBuild/
+.cxx/
