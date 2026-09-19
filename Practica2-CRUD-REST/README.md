@@ -362,7 +362,7 @@ Entre las dificultades resueltas estuvieron la compatibilidad de Gradle con el J
 
 Como trabajo posterior sería conveniente incorporar HTTPS para un despliegue no local, almacenamiento seguro de sesión si se requiere recordar el login y pruebas automatizadas para los endpoints y la interfaz.
 
-## 4. Bibliografía (APA 7.ª edición)
+## 4. Bibliografía
 
 Android Developers. (s. f.). *Network address space*. https://developer.android.com/studio/run/emulator-networking-address
 
