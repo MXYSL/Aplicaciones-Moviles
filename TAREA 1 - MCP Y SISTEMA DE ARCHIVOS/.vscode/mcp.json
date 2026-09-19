@@ -1,0 +1,15 @@
+﻿{
+    "servers":  {
+                    "filesystem":  {
+                                       "args":  [
+                                                    "/c",
+                                                    "npx",
+                                                    "-y",
+                                                    "@modelcontextprotocol/server-filesystem",
+                                                    "D:\\mayra\\Documents\\GitHub\\Aplicaciones-Moviles\\TAREA 1 - MCP Y SISTEMA DE ARCHIVOS\\workspace-mcp"
+                                                ],
+                                       "command":  "cmd",
+                                       "type":  "stdio"
+                                   }
+                }
+}

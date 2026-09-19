@@ -1,0 +1,9 @@
+﻿REGISTRO DE ACTIVIDADES
+
+Actividad 1: Instalar el servidor MCP.
+Actividad 2: Listar los archivos autorizados.
+Actividad 3: Leer prueba.txt.
+Actividad 4: Crear un archivo nuevo.
+Actividad 5: Modificar un archivo existente.
+Actividad 6: Buscar un archivo.
+Actividad 7: Comprobar el límite de seguridad.

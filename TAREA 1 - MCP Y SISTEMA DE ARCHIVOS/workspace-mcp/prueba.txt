@@ -1,0 +1,9 @@
+﻿PRÁCTICA MCP - SISTEMA DE ARCHIVOS
+
+Este archivo fue creado manualmente antes de conectar el servidor MCP.
+
+Objetivo:
+Comprobar que GitHub Copilot puede leer archivos locales mediante
+las herramientas publicadas por el servidor MCP Filesystem.
+
+Estado inicial: Pendiente de lectura.
