@@ -1,0 +1,6 @@
+PRUEBA DE CREACIÓN MCP
+
+Este archivo fue creado mediante GitHub Copilot utilizando 
+el servidor MCP Filesystem.
+
+Estado: Modificado correctamente mediante MCP.
