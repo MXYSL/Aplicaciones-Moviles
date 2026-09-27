@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="40dp">
+
+        <!-- Encabezado -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Regresar"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="?attr/colorOnSurface" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Crea tu receta"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Guarda una nueva idea en FoodLab."
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Nombre -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:hint="Nombre de la receta">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Contraseña -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Contraseña de receta"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Correo del chef">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Teléfono -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPhone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Teléfono">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Porciones -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPortions"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Porciones">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPortions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ingredientes -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutIngredients"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:hint="Ingredientes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="top|start"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="4"
+                android:paddingTop="14dp"
+                android:scrollbars="vertical" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:text="Escribe un ingrediente por línea o sepáralos con comas."
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="12sp" />
+
+        <!-- Categoría con sugerencias -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCategory"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:hint="Categoría">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Búsqueda -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint="Buscar una idea"
+            app:startIconDrawable="@android:drawable/ic_menu_search">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="Prueba buscando tacos, ensalada, sopa o pizza."
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="13sp" />
+
+        <!-- Guardar -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:text="Guardar receta"
+            android:textSize="16sp"
+            app:cornerRadius="16dp"
+            app:icon="@android:drawable/ic_menu_save"
+            app:iconGravity="textStart" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

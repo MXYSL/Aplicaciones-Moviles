@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="110dp">
+
+            <!-- Encabezado -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Regresar"
+                    android:src="@android:drawable/ic_media_previous"
+                    app:tint="?attr/colorOnSurface" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Acciones de cocina"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Prepara y organiza tu receta."
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Receta -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PREPARANDO"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textRecipeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Crea una receta primero"
+                        android:textColor="?attr/colorOnSurface"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textRecipeInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Tu receta aparecerá aquí."
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Acciones principales -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Acciones rápidas"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="14dp"
+                android:text="Guardar receta"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_menu_save" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShare"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="10dp"
+                android:text="Compartir receta"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_menu_share" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:text="Cancelar preparación" />
+
+            <!-- Iconos -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Tu receta"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFavorite"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="Favorita"
+                    app:icon="@android:drawable/btn_star_big_off" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnShopping"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    android:text="Compras"
+                    app:icon="@android:drawable/ic_menu_add" />
+
+            </LinearLayout>
+
+            <!-- Segmentado -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="¿En qué etapa estás?"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/togglePreparation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:checkedButton="@id/btnPrepare"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrepare"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Preparar" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnServe"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Servir" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Progreso -->
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressLoading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:text="Iniciar preparación"
+                app:cornerRadius="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDisabled"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:enabled="false"
+                android:text="Finalizar preparación" />
+
+            <!-- Ingredientes -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Ingredientes"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Todavía no hay ingredientes."
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="15sp"
+                android:lineSpacingExtra="5dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:hint="Nuevo ingrediente">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editNewIngredient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddIngredient"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="Agregar ingrediente"
+                app:icon="@android:drawable/ic_input_add" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FAB normal -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="20dp"
+        android:contentDescription="Marcar como favorita"
+        android:src="@android:drawable/btn_star_big_off"
+        app:tint="@android:color/white" />
+
+    <!-- FAB extendido -->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:text="Preparar"
+        app:icon="@android:drawable/ic_media_play" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
