@@ -1,87 +1,311 @@
-# TAREA 2  
-# ELEMENTOS BÁSICOS DE INTERFAZ DE USUARIO
+<div align="center">
 
-## Desarrollo de Aplicaciones Móviles Nativas
+# 🍃 FoodLab
 
----
+## TAREA 2 · ELEMENTOS BÁSICOS DE INTERFAZ DE USUARIO
 
-### Instituto Politécnico Nacional  
-### Escuela Superior de Cómputo
+### Desarrollo de Aplicaciones Móviles Nativas
+**Instituto Politécnico Nacional**  
+**Escuela Superior de Cómputo**
 
 **Ingeniería en Sistemas Computacionales**
 
-**Materia:** Desarrollo de Aplicaciones Móviles Nativas  
-**Actividad:** Tarea 2 - Elementos básicos de interfaz de usuario  
-**Proyecto:** FoodLab - Catálogo interactivo de interfaces móviles  
-**Alumna:** Mayra Solís Lugo  
-**Grupo:** 7CV4  
-**Profesor:** Gabriel Hurtado Avilés  
-**Ciclo escolar:** 2026  
+<br>
+
+| **Información académica** |
+| :---: |
+| **Alumna:** Mayra Solis Lugo |
+| **Grupo:** 7CV4 |
+| **Profesor:** Gabriel Hurtado Avilés |
+| **Ciclo escolar:** 2026 |
+
+<br>
+
+![Android](https://img.shields.io/badge/Android-Nativo-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-Views%20%7C%20Compose-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-Dart-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+
+### *Explora, prepara y organiza tus recetas.*
+
+</div>
 
 ---
 
-## FoodLab
+## 📱 Descripción general
 
-**FoodLab** es el proyecto desarrollado para la Tarea 2 de la materia Desarrollo de Aplicaciones Móviles Nativas. Consiste en un catálogo interactivo de interfaces móviles presentado mediante una aplicación temática orientada a la creación, organización y consulta de recetas.
+La **Tarea 2 - Elementos básicos de interfaz de usuario** tiene como propósito desarrollar un catálogo interactivo que permita identificar, implementar y comparar los componentes utilizados comúnmente en el desarrollo de aplicaciones móviles.
 
-La finalidad del proyecto es reunir diferentes elementos comunes de una interfaz móvil dentro de una aplicación coherente, en lugar de presentarlos como ejemplos independientes. De esta manera, cada elemento forma parte de la experiencia general de FoodLab y puede utilizarse directamente dentro de las distintas áreas de la aplicación.
+Para realizar la actividad se desarrolló **FoodLab**, una aplicación temática relacionada con la creación, preparación y organización de recetas. En lugar de presentar los componentes de interfaz como ejemplos aislados, estos se integran dentro de situaciones propias de una aplicación de cocina.
 
-La misma propuesta se desarrolla utilizando diferentes tecnologías, conservando una temática, organización y funcionalidad equivalentes. Esto permite observar cómo una misma interfaz y sus interacciones pueden construirse mediante distintos enfoques de desarrollo móvil.
+De esta forma, un campo de texto no se presenta únicamente como un campo genérico, sino que puede formar parte del registro de una receta; los elementos de selección permiten configurar preferencias; las listas permiten explorar recetas; y los mecanismos de retroalimentación informan al usuario sobre las acciones realizadas.
 
----
-
-## Objetivo
-
-El objetivo de la actividad es construir un catálogo interactivo de elementos de interfaz de usuario e implementarlo utilizando distintas tecnologías de desarrollo.
-
-A través de FoodLab se busca identificar los elementos fundamentales que conforman una aplicación móvil, comprender su comportamiento y reconocer las equivalencias existentes entre las distintas plataformas y formas de construcción de interfaces.
-
-El proyecto también permite comparar la organización de cada tecnología, la manera en que se define una interfaz, el manejo de la interacción con el usuario y la forma en que se estructura una aplicación móvil completa.
+El mismo concepto se implementa utilizando **tres tecnologías diferentes**, manteniendo una estructura funcional y visual equivalente. Esto permite comparar la manera en que cada plataforma resuelve problemas similares de diseño, navegación, organización e interacción.
 
 ---
 
-## Concepto de la aplicación
+## 🎯 Objetivo
 
-FoodLab utiliza el contexto de una aplicación de cocina y recetas para integrar los contenidos de la práctica.
+El objetivo principal de la actividad es:
 
-La aplicación permite recorrer diferentes áreas relacionadas con la creación, preparación, personalización y exploración de recetas. Cada área incorpora distintos elementos de interfaz de usuario, manteniendo una presentación uniforme y una navegación consistente.
+> **Construir un catálogo interactivo de elementos de interfaz de usuario e implementarlo en diferentes tecnologías, con el propósito de identificar los componentes básicos de una interfaz móvil, sus equivalencias entre plataformas y las diferencias entre los enfoques utilizados para construirlas.**
 
-La pantalla principal funciona como punto de acceso a las seis áreas que conforman el catálogo:
+A partir de este objetivo, FoodLab busca integrar los elementos estudiados dentro de una aplicación funcional y visualmente consistente.
 
-1. **Crea tu receta**
-2. **Acciones de cocina**
-3. **Personaliza tu menú**
-4. **Explora recetas**
-5. **Cocina en progreso**
-6. **Diseño de FoodLab**
+El proyecto permite analizar aspectos como:
 
-Estas áreas conservan el mismo propósito general en cada una de las implementaciones realizadas.
+- La construcción de interfaces móviles.
+- La organización visual de la información.
+- La interacción entre usuario y aplicación.
+- La navegación entre diferentes áreas.
+- El manejo de estados dentro de una interfaz.
+- La retroalimentación proporcionada al usuario.
+- La adaptación de un mismo diseño a distintas tecnologías.
+- Las diferencias entre enfoques declarativos y tradicionales.
+- La reutilización conceptual de una misma interfaz en diferentes plataformas.
 
----
-
-## Tecnologías utilizadas
-
-La actividad contempla tres implementaciones principales de la misma aplicación:
-
-### Android nativo con Views y XML
-
-Versión desarrollada de manera nativa para Android utilizando Kotlin y layouts XML.
-
-### Android nativo con Jetpack Compose
-
-Versión desarrollada de manera nativa para Android utilizando Kotlin y el enfoque declarativo proporcionado por Jetpack Compose.
-
-### Flutter
-
-Versión multiplataforma desarrollada utilizando Flutter y Dart.
-
-Cada implementación cuenta con su propia documentación, código fuente y recursos necesarios para su ejecución.
+La intención no es únicamente comprobar que un determinado componente puede mostrarse en pantalla, sino demostrar cómo puede integrarse de manera coherente dentro de una aplicación.
 
 ---
 
-## Organización general del proyecto
+# 🍃 FoodLab
 
-El directorio de la Tarea 2 se organiza separando cada implementación para mantener de forma independiente su código y documentación.
+## ¿Qué es FoodLab?
+
+**FoodLab** es un catálogo interactivo de interfaces móviles presentado como una aplicación de cocina y administración de recetas.
+
+Su concepto parte de una idea sencilla: utilizar actividades relacionadas con la preparación de alimentos para proporcionar un contexto real a los distintos elementos de interfaz solicitados en la práctica.
+
+En FoodLab, el usuario puede crear una receta, seleccionar características, organizar ingredientes, consultar diferentes platillos, iniciar una preparación y recibir información sobre las acciones que realiza.
+
+Estas funciones permiten integrar diferentes tipos de interacción sin perder la coherencia temática de la aplicación.
+
+### Concepto principal
+
+```text
+                    🍃 FOODLAB
+                        │
+                        ▼
+              Catálogo interactivo
+                        │
+        ┌───────────────┼───────────────┐
+        │               │               │
+        ▼               ▼               ▼
+     Crear           Organizar        Explorar
+    recetas          preferencias      recetas
+        │               │               │
+        └───────────────┼───────────────┘
+                        │
+                        ▼
+                    Preparar
+                     recetas
+                        │
+                        ▼
+               Interacción y
+                retroalimentación
+```
+
+El resultado es una aplicación en la que los elementos de interfaz forman parte de un flujo comprensible para el usuario.
+
+---
+
+## 💡 Concepto de la aplicación
+
+FoodLab utiliza el contexto de una aplicación de recetas para organizar el contenido de la práctica.
+
+La experiencia comienza en un **menú principal**, desde el cual el usuario puede acceder a seis áreas diferentes. Cada una representa un grupo de interacciones y elementos de interfaz.
+
+Aunque cada área tiene una finalidad distinta, todas forman parte del mismo concepto.
+
+Por ejemplo, la información registrada al crear una receta puede posteriormente utilizarse para mostrarla, prepararla o consultarla desde otras partes de la aplicación. Esto permite que FoodLab se comporte como una aplicación integrada y no únicamente como una colección de pantallas independientes.
+
+La aplicación mantiene tres principios generales:
+
+**Coherencia.**  
+Las diferentes pantallas utilizan la misma temática, estilo visual y lenguaje.
+
+**Interactividad.**  
+Los elementos están diseñados para responder a las acciones realizadas por el usuario.
+
+**Equivalencia.**  
+Las tres implementaciones buscan representar las mismas funciones utilizando las herramientas correspondientes a cada tecnología.
+
+---
+
+## 📌 Alcance del proyecto
+
+La actividad comprende el desarrollo de una misma propuesta de interfaz utilizando tres tecnologías.
+
+El alcance incluye:
+
+- Diseño de una pantalla principal.
+- Organización del catálogo en seis áreas.
+- Navegación entre las diferentes secciones.
+- Integración de elementos interactivos.
+- Manejo de diferentes estados visuales.
+- Uso de contenido gráfico.
+- Adaptación de la interfaz a las características de cada tecnología.
+- Uso de una identidad visual común.
+- Implementación de tema claro y oscuro cuando la plataforma lo permite.
+- Generación de evidencias de funcionamiento.
+- Documentación independiente de cada implementación.
+- Generación de aplicaciones Android instalables.
+
+Cada tecnología se mantiene como un proyecto independiente dentro de la misma entrega.
+
+Esto permite desarrollar, ejecutar, documentar y evaluar cada implementación por separado sin perder la relación existente entre ellas.
+
+---
+
+## 🧩 Organización de FoodLab
+
+FoodLab se divide en seis áreas principales.
+
+| # | Área | Propósito general |
+| :---: | :--- | :--- |
+| **01** | **Crea tu receta** | Capturar y organizar la información necesaria para registrar una receta. |
+| **02** | **Acciones de cocina** | Ejecutar diferentes acciones relacionadas con una receta y su preparación. |
+| **03** | **Personaliza tu menú** | Configurar preferencias y características mediante diferentes opciones de selección. |
+| **04** | **Explora recetas** | Consultar y organizar diferentes recetas mediante colecciones visuales. |
+| **05** | **Cocina en progreso** | Mostrar información, estados y retroalimentación durante una preparación. |
+| **06** | **Diseño de FoodLab** | Presentar diferentes formas de organización y distribución de contenido. |
+
+Estas seis áreas se mantienen conceptualmente en todas las versiones del proyecto.
+
+La implementación interna puede variar dependiendo de las herramientas disponibles en cada tecnología, pero el objetivo es conservar una experiencia equivalente.
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+La actividad contempla tres implementaciones principales.
+
+### 🟢 Android nativo · Views + XML
+
+Implementación nativa para Android utilizando **Kotlin** para la lógica de la aplicación y **XML** para definir las interfaces.
+
+Esta versión representa el enfoque tradicional de construcción de interfaces Android mediante jerarquías de vistas y archivos de layout.
+
+La documentación específica se encuentra dentro del proyecto correspondiente.
+
+---
+
+### 🟣 Android nativo · Jetpack Compose
+
+Implementación nativa para Android utilizando **Kotlin** y **Jetpack Compose**.
+
+Esta versión utiliza un enfoque declarativo para construir y actualizar la interfaz de acuerdo con el estado de la aplicación.
+
+Su documentación se mantiene de manera independiente dentro de su proyecto.
+
+---
+
+### 🔵 Flutter · Dart
+
+Implementación desarrollada utilizando **Flutter** y **Dart**.
+
+Esta versión utiliza el sistema de widgets de Flutter y permite construir la interfaz mediante un enfoque declarativo.
+
+Al igual que las versiones Android, mantiene el concepto general y las seis áreas principales de FoodLab.
+
+---
+
+## 🔄 Equivalencia entre implementaciones
+
+Uno de los objetivos centrales del proyecto es conservar una relación directa entre las tres versiones.
+
+```text
+                     FOODLAB
+                        │
+          ┌─────────────┼─────────────┐
+          │             │             │
+          ▼             ▼             ▼
+     Views + XML     Compose        Flutter
+          │             │             │
+          └─────────────┼─────────────┘
+                        │
+                        ▼
+                Misma experiencia
+                   conceptual
+```
+
+Las tecnologías no utilizan necesariamente los mismos componentes internos, pero cada versión busca ofrecer una función equivalente.
+
+Esto permite comparar aspectos como:
+
+| Aspecto | Views/XML | Compose | Flutter |
+| :--- | :---: | :---: | :---: |
+| Aplicación FoodLab | ✓ | ✓ | ✓ |
+| Seis áreas principales | ✓ | ✓ | ✓ |
+| Navegación | ✓ | ✓ | ✓ |
+| Interacción | ✓ | ✓ | ✓ |
+| Identidad visual común | ✓ | ✓ | ✓ |
+| Documentación independiente | ✓ | ✓ | ✓ |
+| APK Android | ✓ | ✓ | ✓ |
+
+> El detalle de las equivalencias entre componentes se documenta dentro de los archivos correspondientes a cada implementación.
+
+---
+
+## 🎨 Diseño e identidad visual
+
+Para facilitar la comparación entre tecnologías se definió una identidad visual común para FoodLab.
+
+El diseño está inspirado en alimentos, ingredientes, recetas y cocina.
+
+### Paleta conceptual
+
+| Elemento | Uso |
+| :--- | :--- |
+| 🟢 **Verde** | Color principal e identidad de FoodLab |
+| 🟠 **Naranja** | Acciones y elementos secundarios |
+| ⚪ **Tonos claros** | Fondos y superficies |
+| ⚫ **Tonos oscuros** | Adaptación al modo oscuro |
+
+La interfaz utiliza además:
+
+- Tarjetas.
+- Iconografía.
+- Fotografías de alimentos.
+- Espaciado uniforme.
+- Jerarquía tipográfica.
+- Bordes redondeados.
+- Organización consistente del contenido.
+
+La intención es que una persona pueda reconocer inmediatamente que las tres aplicaciones pertenecen al mismo proyecto, aun cuando hayan sido desarrolladas utilizando tecnologías diferentes.
+
+---
+
+## 🧭 Navegación e interacción
+
+La navegación general se organiza alrededor de una pantalla principal.
+
+```text
+                     MENÚ PRINCIPAL
+                           │
+       ┌───────────┬───────┼───────┬───────────┐
+       │           │       │       │           │
+       ▼           ▼       ▼       ▼           ▼
+     Crear      Acciones Personalizar Explorar  ...
+       │           │       │       │
+       └───────────┴───────┼───────┴───────────┘
+                           │
+                           ▼
+                    Regreso al menú
+```
+
+Desde esta pantalla el usuario puede acceder a las diferentes áreas de FoodLab y regresar posteriormente al punto principal.
+
+Las interacciones buscan proporcionar una respuesta visual comprensible. Dependiendo de la acción, la aplicación puede actualizar contenido, modificar un estado, mostrar información adicional o navegar hacia otra área.
+
+Además, determinadas partes de FoodLab pueden compartir información para mantener continuidad entre las diferentes secciones.
+
+---
+
+## 📂 Organización del repositorio
+
+La Tarea 2 se mantiene dentro de un único directorio del repositorio general.
+
+Su organización conceptual es la siguiente:
 
 ```text
 TAREA 2 - ELEMENTOS BASICOS DE INTERFAZ/
@@ -98,131 +322,155 @@ TAREA 2 - ELEMENTOS BASICOS DE INTERFAZ/
 │   └── README.md
 │
 ├── docs/
+│   ├── flutter/
+│   ├── eva/
+│   └── compose/
 │
 └── apk/
 ```
 
-El presente archivo contiene únicamente la información general de la actividad.
+### `README.md`
 
-Los detalles correspondientes a cada tecnología se encuentran en el archivo `README.md` incluido dentro de su respectivo proyecto.
+Documento principal de la actividad. Presenta el proyecto, su objetivo, alcance y organización general.
 
----
+### `flutter/`
 
-## Contenido de la entrega
+Contiene la implementación de FoodLab desarrollada con Flutter y su documentación correspondiente.
 
-De manera general, la entrega está integrada por:
+### `FoodLabEVA/`
 
-- Código fuente de las diferentes implementaciones de FoodLab.
-- Documentación individual de cada tecnología.
-- Recursos gráficos utilizados por las aplicaciones.
-- Evidencias de funcionamiento.
-- Capturas de las diferentes secciones.
-- Archivos APK generados para las versiones correspondientes.
-- Información necesaria para identificar y ejecutar cada proyecto.
-- Comparación de las implementaciones realizadas.
-- Reflexión sobre las diferencias encontradas durante el desarrollo.
+Contiene la implementación Android nativa basada en Views y XML.
 
-La documentación específica se mantiene dentro de cada implementación con el propósito de evitar mezclar instrucciones o características que pertenecen exclusivamente a una tecnología.
+### `android-compose/`
 
----
+Contiene la implementación Android nativa realizada con Jetpack Compose.
 
-## Estructura de la interfaz
+### `docs/`
 
-FoodLab mantiene una organización común en sus diferentes versiones.
+Directorio destinado a las evidencias visuales y documentación complementaria de cada implementación.
 
-La aplicación parte de una pantalla principal desde la cual se puede acceder a las distintas áreas del catálogo. Cada sección está relacionada con una categoría de elementos de interfaz y presenta ejemplos que pueden ser utilizados directamente por el usuario.
+### `apk/`
 
-Aunque la implementación interna cambia dependiendo de la tecnología utilizada, se conserva una experiencia visual y funcional equivalente para facilitar la comparación entre las versiones.
+Contiene los archivos instalables generados como parte de la entrega.
 
 ---
 
-## Identidad visual
+## 📦 Contenido de la entrega
 
-Las diferentes versiones de FoodLab comparten una misma identidad visual para que la comparación se concentre principalmente en las tecnologías utilizadas y no en cambios de diseño.
+La entrega final contempla de manera general:
 
-El concepto visual se encuentra relacionado con alimentos, recetas y cocina. Se utiliza una combinación de tonos verdes y cálidos, imágenes de platillos, tarjetas, iconografía y una distribución consistente del contenido.
+| Elemento | Descripción |
+| :--- | :--- |
+| **Código fuente** | Proyectos completos de las diferentes implementaciones. |
+| **README general** | Presentación y organización de la actividad. |
+| **README individuales** | Documentación específica de cada tecnología. |
+| **Recursos** | Imágenes y demás elementos utilizados por las aplicaciones. |
+| **Evidencias** | Capturas que demuestran el funcionamiento de las diferentes áreas. |
+| **APK** | Aplicaciones Android generadas para la entrega. |
+| **Comparación** | Correspondencia entre las diferentes implementaciones. |
+| **Reflexión** | Análisis final sobre las tecnologías utilizadas. |
 
-También se considera la adaptación de la aplicación a las características visuales del dispositivo, manteniendo legibilidad, jerarquía de información y una navegación clara.
-
----
-
-## Navegación
-
-La navegación de FoodLab está diseñada alrededor de una pantalla principal y seis áreas de contenido.
-
-El usuario puede ingresar a cada sección, interactuar con sus elementos y regresar al menú principal. Algunas áreas también comparten información con otras partes de la aplicación para mantener continuidad durante el uso.
-
-Este comportamiento se reproduce en las diferentes tecnologías utilizando los mecanismos correspondientes a cada plataforma.
-
----
-
-## Documentación
-
-Cada proyecto contiene un archivo `README.md` independiente.
-
-Estos documentos incluyen la información correspondiente a la tecnología utilizada, organización del proyecto, requisitos, ejecución, características implementadas y demás información necesaria para comprender cada versión.
-
-De esta forma, este README funciona como la **portada e introducción general de la Tarea 2**, mientras que los README internos funcionan como documentación específica de cada implementación.
+La separación de estos elementos permite mantener una entrega organizada y facilita la revisión individual de cada tecnología.
 
 ---
 
-## Evidencias
+## 📖 Documentación
 
-Las evidencias generadas durante el desarrollo se organizan dentro del directorio:
+La documentación se encuentra dividida en dos niveles.
+
+### Documentación general
+
+El presente archivo:
+
+```text
+README.md
+```
+
+funciona como portada, presentación e introducción general del proyecto.
+
+No contiene las instrucciones técnicas completas de cada aplicación, ya que estas pueden cambiar dependiendo de la tecnología utilizada.
+
+### Documentación específica
+
+Cada implementación contiene su propio:
+
+```text
+README.md
+```
+
+En estos archivos se documentan los aspectos particulares de cada proyecto, como su tecnología, estructura, requisitos, ejecución y características implementadas.
+
+Esta organización evita mezclar información de Flutter con Android Views o Jetpack Compose.
+
+---
+
+## 📸 Evidencias
+
+Las evidencias visuales del funcionamiento de FoodLab se almacenan dentro de:
 
 ```text
 docs/
 ```
 
-Este espacio está destinado a almacenar las capturas necesarias para documentar visualmente el funcionamiento de las diferentes versiones de FoodLab.
+y se organizan de acuerdo con la tecnología correspondiente.
 
-Las evidencias se organizan por tecnología para facilitar su identificación y comparación.
+```text
+docs/
+│
+├── flutter/
+├── eva/
+└── compose/
+```
+
+Las capturas permiten demostrar el funcionamiento de las áreas principales y comparar visualmente las diferentes implementaciones.
 
 ---
 
-## Aplicaciones generadas
+## 📲 Aplicaciones generadas
 
-Los archivos instalables obtenidos durante el desarrollo se concentran en:
+Los archivos instalables generados durante la actividad se almacenan en:
 
 ```text
 apk/
 ```
 
-Esta carpeta permite mantener separados los entregables ejecutables del código fuente de cada proyecto.
+Cada implementación Android tendrá su archivo correspondiente cuando se complete su desarrollo.
+
+Esta separación permite distinguir claramente los archivos de entrega del código fuente y de las evidencias.
 
 ---
 
-## Resultado esperado
+## ✅ Resultado esperado
 
-Al finalizar la actividad se contará con distintas implementaciones de una misma aplicación móvil.
+Al finalizar la actividad se contará con **tres implementaciones de FoodLab**, desarrolladas mediante enfoques diferentes pero basadas en una misma propuesta funcional.
 
-Cada versión conservará el concepto general de FoodLab, sus áreas principales y una experiencia de uso equivalente, pero estará construida mediante las herramientas y paradigmas propios de cada tecnología.
+El resultado permitirá comparar de manera práctica:
 
-Esto permitirá observar de manera práctica las diferencias entre los enfoques de desarrollo utilizados y reconocer las equivalencias entre los elementos que conforman una interfaz móvil.
+- La construcción de interfaces.
+- La organización de proyectos.
+- La definición de componentes.
+- La navegación.
+- El manejo de estados.
+- La interacción con el usuario.
+- La adaptación visual.
+- Las herramientas utilizadas por cada tecnología.
 
----
+El propósito final es reconocer que una misma experiencia de usuario puede construirse mediante diferentes tecnologías, cada una con sus propias herramientas, componentes, ventajas y formas de organización.
 
-## Datos académicos
-
-| Dato | Información |
-|---|---|
-| Institución | Instituto Politécnico Nacional |
-| Escuela | Escuela Superior de Cómputo |
-| Programa académico | Ingeniería en Sistemas Computacionales |
-| Materia | Desarrollo de Aplicaciones Móviles Nativas |
-| Actividad | Tarea 2 - Elementos básicos de interfaz de usuario |
-| Proyecto | FoodLab |
-| Alumna | Mayra Solís Lugo |
-| Grupo | 7CV4 |
-| Profesor | Gabriel Hurtado Avilés |
-| Año | 2026 |
+FoodLab funciona como el elemento común que permite realizar esta comparación dentro de un escenario coherente y visualmente uniforme.
 
 ---
 
-## Autor
+## 🎓 Información académica
+
+---
+
+<div align="center">
+
+<br>
 
 **Mayra Solís Lugo**  
-Ingeniería en Sistemas Computacionales  
-Escuela Superior de Cómputo  
-Instituto Politécnico Nacional  
-Grupo 7CV4
+Escuela Superior de Cómputo · Instituto Politécnico Nacional  
+Ingeniería en Sistemas Computacionales · 7CV4
+
+</div>
