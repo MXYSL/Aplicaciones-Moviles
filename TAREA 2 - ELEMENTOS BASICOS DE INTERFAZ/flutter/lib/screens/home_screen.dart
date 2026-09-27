@@ -1,4 +1,4 @@
-// Menu principal de la app
+// Menu principal
 import 'package:flutter/material.dart';
 
 import 'actions_screen.dart';
@@ -14,152 +14,111 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sections = [
-      const _SectionData(
+      _SectionData(
         title: 'Crea tu receta',
-        subtitle: 'Entrada de texto',
-        description: 'Captura y valida los datos de una nueva receta.',
         icon: Icons.edit_note_rounded,
-        screen: TextInputScreen(),
+        screen: const TextInputScreen(),
       ),
-      const _SectionData(
+      _SectionData(
         title: 'Acciones de cocina',
-        subtitle: 'Botones y acciones',
-        description: 'Prueba diferentes botones y acciones interactivas.',
         icon: Icons.touch_app_rounded,
-        screen: ActionsScreen(),
+        screen: const ActionsScreen(),
       ),
-      const _SectionData(
+      _SectionData(
         title: 'Personaliza tu menú',
-        subtitle: 'Selección',
-        description: 'Selecciona ingredientes, categorías y preferencias.',
         icon: Icons.tune_rounded,
-        screen: SelectionScreen(),
+        screen: const SelectionScreen(),
       ),
-      const _SectionData(
+      _SectionData(
         title: 'Explora recetas',
-        subtitle: 'Listas y colecciones',
-        description: 'Explora recetas mediante listas, cuadrículas y pestañas.',
-        icon: Icons.restaurant_menu_rounded,
-        screen: CollectionsScreen(),
+        icon: Icons.menu_book_rounded,
+        screen: const CollectionsScreen(),
       ),
-      const _SectionData(
+      _SectionData(
         title: 'Cocina en progreso',
-        subtitle: 'Información y feedback',
-        description: 'Visualiza progreso, avisos y respuestas del sistema.',
         icon: Icons.soup_kitchen_rounded,
-        screen: FeedbackScreen(),
+        screen: const FeedbackScreen(),
       ),
-      const _SectionData(
+      _SectionData(
         title: 'Diseño de FoodLab',
-        subtitle: 'Contenedores y estructura',
-        description: 'Conoce cómo se organiza la interfaz de la aplicación.',
         icon: Icons.dashboard_customize_rounded,
-        screen: StructureScreen(),
+        screen: const StructureScreen(),
       ),
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(Icons.eco_rounded),
-            SizedBox(width: 10),
+            SizedBox(width: 8),
             Text('FoodLab', style: TextStyle(fontWeight: FontWeight.bold)),
           ],
         ),
       ),
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.fromLTRB(20, 16, 20, 30),
           children: [
             Text(
               'Catálogo interactivo de\ninterfaces móviles',
               style: Theme.of(context).textTheme.headlineMedium
                   ?.copyWith(fontWeight: FontWeight.bold, height: 1.15),
             ),
-            const SizedBox(height: 8),
+
+            const SizedBox(height: 10),
+
             Text(
-              'Explora, prepara y organiza tus recetas mientras descubres los componentes básicos de una interfaz móvil.',
+              'Explora, prepara y organiza tus recetas.',
               style: Theme.of(context).textTheme.bodyLarge,
             ),
-            const SizedBox(height: 24),
 
-            // Receta destacada
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Theme.of(context).colorScheme.primaryContainer,
-                    Theme.of(context).colorScheme.secondaryContainer,
-                  ],
-                ),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: 72,
-                    height: 72,
-                    decoration: BoxDecoration(
-                      color: Theme.of(context).colorScheme.surface
-                          .withValues(alpha: 0.8),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Icon(Icons.ramen_dining_rounded, size: 40),
-                  ),
-                  const SizedBox(width: 16),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'RECETA DESTACADA',
-                          style: Theme.of(context).textTheme.labelMedium
-                              ?.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          'Pasta con vegetales',
-                          style: Theme.of(context).textTheme.titleLarge
-                              ?.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 4),
-                        const Text(
-                          'Una receta rápida para comenzar a explorar FoodLab.',
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+            const SizedBox(height: 26),
+
+            _FeaturedRecipe(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const CollectionsScreen()),
+                );
+              },
             ),
 
-            const SizedBox(height: 28),
+            const SizedBox(height: 30),
+
             Text(
-              'Explora el catálogo',
+              'Explora FoodLab',
               style: Theme.of(context).textTheme.titleLarge
                   ?.copyWith(fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 6),
-            const Text('Selecciona una categoría para probar sus componentes.'),
-            const SizedBox(height: 16),
 
-            ...sections.asMap().entries.map(
-              (entry) => Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: _SectionCard(number: entry.key + 1, data: entry.value),
-              ),
-            ),
+            const SizedBox(height: 14),
 
-            const SizedBox(height: 12),
-            Center(
-              child: Text(
-                'FoodLab • Catálogo de componentes Flutter',
-                style: Theme.of(context).textTheme.bodySmall,
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: sections.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 12,
+                mainAxisSpacing: 12,
+                childAspectRatio: 1.12,
               ),
+              itemBuilder: (context, index) {
+                final section = sections[index];
+
+                return _SectionCard(
+                  section: section,
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => section.screen),
+                    );
+                  },
+                );
+              },
             ),
-            const SizedBox(height: 12),
           ],
         ),
       ),
@@ -167,63 +126,109 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class _SectionCard extends StatelessWidget {
-  final int number;
-  final _SectionData data;
+class _FeaturedRecipe extends StatelessWidget {
+  final VoidCallback onTap;
 
-  const _SectionCard({required this.number, required this.data});
+  const _FeaturedRecipe({required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => data.screen),
-          );
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Row(
+        onTap: onTap,
+        child: SizedBox(
+          height: 190,
+          child: Stack(
+            fit: StackFit.expand,
             children: [
-              CircleAvatar(
-                radius: 27,
-                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                child: Icon(
-                  data.icon,
-                  color: Theme.of(context).colorScheme.onPrimaryContainer,
+              Image.asset('assets/images/pasta_pollo.png', fit: BoxFit.cover),
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.transparent,
+                      Colors.black.withValues(alpha: 0.78),
+                    ],
+                  ),
                 ),
               ),
-              const SizedBox(width: 16),
-              Expanded(
+              const Positioned(
+                left: 18,
+                right: 18,
+                bottom: 18,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '$number. ${data.title}',
-                      style: Theme.of(context).textTheme.titleMedium
-                          ?.copyWith(fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      data.subtitle,
+                      'RECETA DESTACADA',
                       style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
-                        fontWeight: FontWeight.w600,
+                        color: Colors.white70,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 5),
                     Text(
-                      data.description,
-                      style: Theme.of(context).textTheme.bodySmall,
+                      'Pasta con pollo',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
-              const Icon(Icons.chevron_right_rounded),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _SectionCard extends StatelessWidget {
+  final _SectionData section;
+  final VoidCallback onTap;
+
+  const _SectionCard({required this.section, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 54,
+                height: 54,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primaryContainer,
+                  borderRadius: BorderRadius.circular(17),
+                ),
+                child: Icon(
+                  section.icon,
+                  size: 29,
+                  color: Theme.of(context).colorScheme.onPrimaryContainer,
+                ),
+              ),
+              const SizedBox(height: 14),
+              Text(
+                section.title,
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleMedium
+                    ?.copyWith(fontWeight: FontWeight.bold),
+              ),
             ],
           ),
         ),
@@ -234,15 +239,11 @@ class _SectionCard extends StatelessWidget {
 
 class _SectionData {
   final String title;
-  final String subtitle;
-  final String description;
   final IconData icon;
   final Widget screen;
 
   const _SectionData({
     required this.title,
-    required this.subtitle,
-    required this.description,
     required this.icon,
     required this.screen,
   });
