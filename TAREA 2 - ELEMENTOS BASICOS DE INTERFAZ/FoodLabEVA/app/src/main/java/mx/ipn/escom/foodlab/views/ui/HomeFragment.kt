@@ -12,7 +12,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<View>(R.id.cardFeatured).setOnClickListener {
-            showComingSoon(view, "Explora recetas")
+            (requireActivity() as MainActivity)
+                .openFragment(CollectionsFragment())
         }
 
         view.findViewById<View>(R.id.cardCreateRecipe).setOnClickListener {
@@ -26,11 +27,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         view.findViewById<View>(R.id.cardCustomize).setOnClickListener {
-            showComingSoon(view, "Personaliza tu menú")
+            (requireActivity() as MainActivity)
+                .openFragment(SelectionFragment())
         }
 
         view.findViewById<View>(R.id.cardExplore).setOnClickListener {
-            showComingSoon(view, "Explora recetas")
+            (requireActivity() as MainActivity)
+                .openFragment(CollectionsFragment())
         }
 
         view.findViewById<View>(R.id.cardProgress).setOnClickListener {
